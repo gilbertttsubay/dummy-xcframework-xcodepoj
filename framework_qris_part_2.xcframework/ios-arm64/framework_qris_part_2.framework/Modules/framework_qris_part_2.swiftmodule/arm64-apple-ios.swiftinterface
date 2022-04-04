@@ -1,0 +1,102 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name framework_qris_part_2
+import AVFoundation
+import AVKit
+import Alamofire
+import Foundation
+import Lottie
+import Photos
+import SkeletonView
+import Swift
+import UIKit
+import WebKit
+import _Concurrency
+public struct QRPaylaterClient {
+  public func constructHeaderGeneral() -> Alamofire.HTTPHeaders
+  public mutating func determineBuildMode()
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func setTapGestureRecognizer(action: (() -> Swift.Void)?)
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func addTapGestureRecognizerQR(action: (() -> Swift.Void)?)
+  @_Concurrency.MainActor(unsafe) public func roundCorners(_ corners: UIKit.UIRectCorner = .allCorners, value: CoreGraphics.CGFloat)
+}
+public enum BuildMode {
+  case sit
+  case uat
+  case prod
+  public static func == (a: framework_qris_part_2.BuildMode, b: framework_qris_part_2.BuildMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol ClientProtocol {
+  func getAuthToken() -> Swift.String
+  func getBuildMode() -> framework_qris_part_2.BuildMode
+}
+public struct QRClient {
+  public mutating func determineBuildMode()
+}
+public struct QRBalance : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct QRNewRouterSdk {
+  public init(viewController: UIKit.UIViewController)
+  public func navigateToQrScan()
+}
+public enum QRResultStatusResp<Value> {
+  case success(Value)
+  case failure(Swift.String)
+  case serverBussy
+}
+public enum QRResultResponse<Value> {
+  case message(Swift.String)
+  case status(Swift.Int)
+  case error(Swift.Error)
+  case data(Value)
+}
+public struct QRInquiryDtoViewData : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct QRTransactionClient {
+  public func constructHeaderGeneral() -> Alamofire.HTTPHeaders
+  public func getTransactionBalance(completion: @escaping (framework_qris_part_2.QRResponse<framework_qris_part_2.QRBalance>) -> Swift.Void) -> Alamofire.DataRequest
+}
+public struct QRResponse<T> {
+}
+public enum PaymentMethod {
+  case BALANCE
+  case PAYLATER
+  case POINT
+  public static func == (a: framework_qris_part_2.PaymentMethod, b: framework_qris_part_2.PaymentMethod) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum QrFeature {
+  case MPM
+  case CPM
+  public static func == (a: framework_qris_part_2.QrFeature, b: framework_qris_part_2.QrFeature) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum TipType {
+  case ANY
+  case FIXED
+  case PERCENTAGE
+  case NONE
+  public static func == (a: framework_qris_part_2.TipType, b: framework_qris_part_2.TipType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct QRInquiryResponse : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
