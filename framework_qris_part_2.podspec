@@ -80,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/gilbertttsubay/dummy-xcframework.git" }
+  spec.source       = { :git => "https://github.com/gilbertttsubay/dummy-xcframework-xcodepoj.git" }
   spec.swift_version      = "5.3"
 
   spec.ios.deployment_target = '13.0'
